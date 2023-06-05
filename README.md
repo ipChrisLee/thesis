@@ -141,7 +141,11 @@ svg图片：
 
 同理，`\caption`是标题，`\label`可以用于引用。
 
+## 超链接
 
+```latex
+\href{www.baidu.com}{百度}
+```
 
 # TODO List
 
