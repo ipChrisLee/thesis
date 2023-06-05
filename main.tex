@@ -1,0 +1,46 @@
+\documentclass[oneside,openany]{thesis}
+
+\hypersetup{colorlinks,linkcolor=black,citecolor=black,urlcolor=magenta} % 链接颜色设置
+\linespread{1.5}% 设置行距
+\input{tex_src/package}% 加载宏包
+\input{tex_src/info}% 加载论文信息
+
+\begin{document}
+\include{tex_src/fun.tex}
+
+% 封面
+\makecover
+
+\frontmatter
+
+% 中文摘要
+\thesispagestyle{-4}{}{中文摘要} % 自定义页眉和页脚
+\include{tex_src/abstract_cn}
+
+% 英文摘要
+\thesispagestyle{-4}{}{英文摘要} % 自定义页眉和页脚
+\include{tex_src/abstract_en}
+
+% 目录
+\thesispagestyle{-4}{}{目录} % 自定义页眉和页脚
+\tableofcontents
+
+\mainmatter
+\thesispagestyle{-4}{}{正文 第\thechapter 章} % 自定义页眉和页脚
+
+% 正文
+\include{tex_src/chap01}
+
+\backmatter
+\thesispagestyle{-4}{}{} % 自定义页眉和页脚
+
+% 参考文献
+\bibliographystyle{tex_ref/chinesebst}
+\bibliography{tex_ref/refs.bib}
+\addcontentsline{toc}{chapter}{参考文献}
+
+% 附录
+% \include{tex_src/literature_en}% 英文原文
+% \include{tex_src/literature_cn}% 中文翻译
+
+\end{document}
